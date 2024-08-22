@@ -1,24 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment-3</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interio Site</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawsome Cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- Daisy UI and Tailwind css  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Heroicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/heroicons@2.1.5/dist/heroicons.min.css"/>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
+            backgroundImage: {
+          custom_gradient: 'linear-gradient(180deg, rgb(247, 241, 241), rgba(255, 255, 255, 0) 100%)',
+            },
             colors: {
-              clifford: '#da373d',
-            }
-          }
-        }
-      }
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              manRope: ["Manrope", "sans-serif"],
+            },
+          },
+        },
+      };
     </script>
-</head>
-<body>
-   
-</body>
+  </head>
+  <body class="font-manRope bg-custom_gradient">
+    <header class="px-3 xl:px-28 lg:px-10 md:px-4 py-3">
+      <div class="navbar">
+        <div class="navbar-start flex">
+          <div class="flex gap-2 items-center">
+            <div
+              class="items-center inline-block w-7 h-7 mx-auto text-center bg-lime-300 rounded-3xl"
+            >
+              <i class="rotate-45 text-sm fa-solid fa-arrow-up-long translate-y-0.5"></i>
+            </div>
+            <div>
+              <h1 class="font-bold text-2xl lg:text-3xl">Rinterio</h1>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-center hidden lg:flex md:!ml-[-136px]">
+          <ul class="menu menu-horizontal px-1 text-base">
+            <li  class="text-gray-600 font-bold"><a>Home</a></li>
+            <li class="text-gray-500"><a>Services</a></li>
+            <li class="text-gray-500"><a>Protfolio</a></li>
+            <li class="text-gray-500"><a>Blogs</a></li>
+            <li class="text-gray-500"><a>Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="navbar-end">
+          <div class="hidden lg:flex items-center xl:gap-6 lg:gap-4">
+            <div class="bg-white xl:w-12 xl:h-12 lg:w-20 lg:h-10 rounded-3xl">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="mx-auto xl:size-8 lg:size-6 xl:translate-y-2 lg:translate-y-2 text-gray-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+            </div>
+            <div class="bg-white xl:w-12 xl:h-12 lg:w-20 lg:h-10 rounded-3xl">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="xl:size-8 lg:size-6 xl:translate-y-2 lg:translate-y-2 mx-auto text-gray-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+              </svg>
+              
+            </div>
+           
+            <a class="btn bg-lime-300 rounded-3xl xl:text-lg lg:text-base font-bold"
+              >Book Consult
+              <div
+                class="items-center inline-block w-7 h-7 mx-auto text-center bg-black rounded-3xl"
+              >
+                <i
+                  class="rotate-45 text-sm fa-solid fa-arrow-up-long xl:pt-1.5 xl:pb-0.5 lg:pt-0.5 lg:pb-1 text-white"
+                ></i></div
+            ></a>
+          </div>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost lg:hidden bg-white rounded-3xl text-lg">
+              <i class="fa-solid fa-bars text-gray-500"></i>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Home</a></li>
+              <li><a>Services</a></li>
+              <li><a>Protfolio</a></li>
+              <li><a>Blogs</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
 </html>
